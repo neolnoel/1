@@ -55,3 +55,11 @@ double root(double a, int *error){
     *error = 3;
     return 0;      
 }
+/*
+@example (Геометрическая последовательность) 3, 12, 48, ..., 768;
+@param a0, (q) множитель;
+@throws (0) ошибок нет, (-3) множитель меньше 1, (-5) невреный n | *error;
+*/
+void computeProgression(int a0, int q, int *error)
+{
+}
