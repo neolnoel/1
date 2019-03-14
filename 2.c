@@ -5,7 +5,7 @@
 Геометрическая последовательность
 @author IVAN
 @link http://moria.1586.su/moodle/mod/page/view.php?id=1705
-@link https://github.com/neolnoel/1/new/master
+@link https://github.com/neolnoel
 
 */
 #include <stdio.h>
