@@ -54,14 +54,14 @@ int main() {
             break;
         case '/':
             result = divide(a, b, &error);
-            if (0 == error) printf("%lg / %lg = %lg\n", a, b, result);
+            if (0 == error) printf("%lg / %lg = %lg\n", a, b, d);
             break;
         case 'G':
             computeProgression(a, b, &error);
             break;
         case 'D':
             result = intDivide(a, b, &error);
-            if (0 == error) printf("%lg % %lg = %lg\n", a, b, result);
+            if (0 == error) printf("%lg % %lg = %lg\n", a, b, d
             break;
         case 'S':
             if (a >= 0) printf("%lg S = %lg\n", a, sqrt(a));
