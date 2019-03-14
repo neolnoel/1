@@ -8,6 +8,7 @@
 @link https://github.com/neolnoel/1/new/master
 */
 #include <stdio.h>
+
 /*
 @example (Деление чисел) 3/3=1;
 @param (a) делимое, (b) делитель, (*error) код ошибки;
@@ -46,7 +47,7 @@ double divide(double a, double b, int *error)
 @return sqrt(a)||0;
 @throws (-2) ошибка деления на 0|*error, (0) ошибок нет;
 */
-double root(double a, int error){
+double root(double a, int *error){
     if (a > 0){
         *error = 0;
         return sqrt(a);
