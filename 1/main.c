@@ -7,7 +7,6 @@
 @link https://github.com/neolnoel
 */
  
-#include <stdio.h>
 # include  < stdio.h >
 # include  < string.h >
 # include  " errorChecker.c "
