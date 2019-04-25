@@ -2,9 +2,8 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
-#include "computeFunctions.h"
-
-
+#include "cFunctions.h"
+#include "cFunctionsGet.h"
 
 /*
 @example FUNCTION(y=8+46*x) |y = y, b = 8, a = 46, x = x|
@@ -20,7 +19,6 @@ int parseFunction(char *str, char *y, char *x, int *a, int *b) {
 
     return 0;
 }
-
 
 /*
 @example SET(z=9) |argName[i] = z, argVal[i] = 9| 
@@ -42,7 +40,6 @@ int parseSet(char *str, char *argName, int *argVal,int *argCnt) {
     (*argCnt)++;
     return 0;
 }
-
 
 /*
 @example \calc FUNCTION(y=8+1*x) SET(x=8) |y(8) = 9|
