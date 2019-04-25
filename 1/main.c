@@ -9,6 +9,9 @@
 
 #include <stdio.h>
 #include <string.h>
+#include "errorChecker.c"
+#include "calcFunctions.c"
+
 #define ARG_AMOUNT 128
 
 /*
