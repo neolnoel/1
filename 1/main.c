@@ -9,7 +9,8 @@
 
 #include <string.h>
 #include <stdio.h>
-#include "computeFunctions.c"
+#include "1cFunction.c"
+#include "2cFunction.c"
 
 #define ARGNUM 256
 
