@@ -7,35 +7,28 @@
 @link https://github.com/neolnoel
 */
 
-#include <stdio.h>
 #include <string.h>
-#include "errorChecker.c"
-#include "calcFunctions.c"
+#include <stdio.h>
+#include "computeFunctions.c"
 
-#define ARG_AMOUNT 128
+#define ARGNUM 256
 
-/*
-Основная программа
-@uses <stdio.h>, <string.h>, errorChecker.c, calcFunctions.h
-*/
 int main(int argc, char *argv[]) {
-    int errorCode = 0, argCount = 0, argValue[ARG_AMOUNT], a, b;
-    char argName[ARG_AMOUNT], x, y;
+    int i;
+    char argName[ARGNUM];
+    int argVal[ARGNUM];
+    int argCnt = 0;
+    char y, x;
+    int a, b;
 
-    if (argc < 2) {
-        errorCode = -1;
-        checkError(&errorCode);
-        return 0;
+    for (i = 1; i < argc; i++) {
+        if (0 == strncmp(argv[i], "SET", strlen("SET"))) {
+            parseSet(argv[i], argName, argVal, &argCnt);
+            
+        }
+        if (0 == strncmp(argv[i], "FUNCTION", strlen("FUNCTION")))
+            parseFunction(argv[i], &y, &x, &a, &b);
     }
-
-    for (int i = 1; i < argc; i++) {
-            if (0 == strncmp(argv[i], "SET", strlen("SET"))) parseSet(argv[i], argName, argValue, argCount);
-            else if (0 == strncmp(argv[i], "FUNCTION", strlen("FUNCTION"))) parseFunc(argv[i], &a, &b, &x, &y);
-            else {
-                errorCode = -1;
-                checkError(&errorCode);
-            }
-    }
-    computeFunc(argName, argValue, argCount, &a, &b, &x, &y);
+    computeFunction(argName, argVal, argCnt, a, b, x, y);
     return 0;
 }
